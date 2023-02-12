@@ -44,6 +44,12 @@
 <body>
   <script>
     window.addEventListener('load', function(ev) {
+      // Check for ad blocker
+      if (typeof _flutter === 'undefined') {
+        alert("Please disable your ad blocker");
+        return;
+      }
+
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
         serviceWorker: {
