@@ -19887,8 +19887,8 @@ arS(){$.Rf.b=A.zm().i(0)
 A.c7($.Rf.O())
 $.Rf.b=A.zm().i(0)
 var s=$.Rf.O()
-$.aql.b=B.b.A(s,"test/")
-if($.aql.O())$.Rg.b=$.Rf.O().split("test/")[1]
+$.aql.b=B.b.A(s,"test/#/")
+if($.aql.O())$.Rg.b=$.Rf.O().split("test/#/")[1]
 if($.C==null)A.apl()
 s=$.C
 s.P_(new A.GV(null))
