@@ -19885,8 +19885,8 @@ aep:function aep(a){this.a=a},
 aeq:function aeq(){},
 arS(){$.ajw.b=A.Kj().i(0)
 var s=$.ajw.O()
-$.aql.b=B.b.A(s,"50169/")
-if($.aql.O())$.Rf.b=$.ajw.O().split("50169/")[1]
+$.aql.b=B.b.A(s,"/")
+if($.aql.O())$.Rf.b=$.ajw.O().split("/")[1]
 if($.C==null)A.apl()
 s=$.C
 s.P_(new A.GU(null))
