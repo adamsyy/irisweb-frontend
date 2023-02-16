@@ -17,7 +17,7 @@
     the `--base-href` argument provided to `flutter build`.
   -->
   <base href="/">
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
@@ -33,66 +33,32 @@
 
   <title>nfc_card</title>
   <link rel="manifest" href="manifest.json">
-  
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = '3573531191';
+    var serviceWorkerVersion = '1748666404';
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
+
   <style>
-    body {background-color: white;}
-    
-      .loading {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-      }
-    
-      .loader {
-        border: 16px solid #f3f3f3;
-        border-radius: 50%;
-        border: 15px solid;
-        border-top: 16px solid #FFFFFF;
-        border-right: 16px solid lightskyblue;
-        border-bottom: 16px solid #FFFFFF;
-        border-left: 16px solid lightskyblue;
-        width: 120px;
-        height: 120px;
-        -webkit-animation: spin 2s linear infinite;
-        animation: spin 2s linear infinite;
-      }
-    
-      @-webkit-keyframes spin {
-        0% {
-          -webkit-transform: rotate(0deg);
-        }
-        100% {
-          -webkit-transform: rotate(360deg);
-        }
-      }
-    
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-    </style>
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex; /* Default Axis is X*/
+      justify-content: center; /* Main Axis */
+      align-items: center; /* Cross Axis */
+    }
+    .indicator{
+      width: 1vw;
+    }
+</style>
 
 </head>
-
-<script src="main.dart.js" type="application/javascript"></script>
-<body>
+<body style="overflow: hidden">
+  <div id="loading_indicator" class="container">
+    <img class="indicator" src="./assets/loading.gif" />
+  </div>
   <script type="text/javascript">
     window.flutterWebRenderer = "html";
   </script>
@@ -110,5 +76,17 @@
       });
     });
   </script>
+
+
+<script>
+  window.onload = function () {
+        setTimeout(function () {
+          var loadingIndicator =                 document.getElementById("loading_indicator");
+          if (loadingIndicator) {
+            loadingIndicator.remove();
+          }
+        }, 10000);
+};
+</script>
 </body>
 </html>
